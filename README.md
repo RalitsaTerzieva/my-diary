@@ -1,5 +1,5 @@
 # my-diary
-Django based diary project
+This is simple Django based diary project for a personal record of thoughts, feelings and events. It is arranged in chronological order.
 
 ***
 
