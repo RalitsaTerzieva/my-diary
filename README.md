@@ -16,3 +16,10 @@ $ cd my-diary
 Then install the dependencies:
 
 <pre><code>$ pip install</code></pre>
+
+Once <pre><code>pip</code></pre> has finished downloading the dependencies:
+
+<pre><code>
+$ cd project
+$ python manage.py runserver
+</code></pre>
