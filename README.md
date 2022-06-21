@@ -7,10 +7,12 @@ Django based diary project
 
 The first thing to do is to clone the repository:
 
-$ git clone https://github.com/RalitsaTerzieva/my-diary\
+<pre><code> $ git clone https://github.com/RalitsaTerzieva/my-diary
 
 $ cd my-diary
 
+</code></pre>
+
 Then install the dependencies:
 
-$ pip install
+<pre><code>$ pip install</code></pre>
