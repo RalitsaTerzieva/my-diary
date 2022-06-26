@@ -3,6 +3,8 @@ This is simple Django based diary project for a personal record of thoughts, fee
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
+https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white
+
 ***
 
 ## Setup
