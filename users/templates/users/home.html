@@ -9,9 +9,23 @@
     </style>
   </head>
   <body>
-    <h1>Hello</h1>
+    {% if user.is_loged %}
+        <h1>Hello, {user.username} !!!</h1>
+        <p> Welcome to the Our site</p>
+        <div>
+            <a href="{% url 'login' %}">Logout</a>
+          </div>
+    {% ele %}
+        <h1>Hello</h1>
+        <p> Welcome to the Our site!</p>
+        <div>
+            <a href="{% url 'home' %}">Sign Up</a>
+      
+            <a href="{% url 'login' %}">Login</a>
+          </div>
+    {% endif%}
 
-    <p> Welcome to the Our site</p>
+    
     <div>
       <a href="{% url 'home' %}">Sign Up</a>
 
