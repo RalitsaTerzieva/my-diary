@@ -9,13 +9,13 @@
     </style>
   </head>
   <body>
-    {% if user.is_loged %}
-        <h1>Hello, {user.username} !!!</h1>
+    {% if user.is_authenticated %}
+        <h1>Hello, {{user.username}} !!!</h1>
         <p> Welcome to the Our site</p>
         <div>
-            <a href="{% url 'login' %}">Logout</a>
+            <a href="{% url 'logout' %}?next=/home">Logout</a>
           </div>
-    {% ele %}
+    {% else %}
         <h1>Hello</h1>
         <p> Welcome to the Our site!</p>
         <div>
@@ -23,13 +23,6 @@
       
             <a href="{% url 'login' %}">Login</a>
           </div>
-    {% endif%}
-
-    
-    <div>
-      <a href="{% url 'home' %}">Sign Up</a>
-
-      <a href="{% url 'login' %}">Login</a>
-    </div>
+    {% endif %}
   </body>
 </html>
