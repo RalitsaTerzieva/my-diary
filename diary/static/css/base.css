@@ -1,9 +1,13 @@
 body {
-    color: pink;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 160px 200px;
-    }
+    background-color: antiquewhite;
+}
+
+body h1 {
+    color: pink;
+}

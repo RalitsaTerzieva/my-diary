@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>My Diary</title>
     {% block css %}
-    <link rel="stylesheet" href="{% static 'css/diary.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     {% endblock %}
@@ -21,19 +21,13 @@
         {% include "navbar.html" %}
     {% endblock %}
     
-    <h1><a href="/">Dear diary …</a></h1>
-
-    {% if messages %}
-    <ul class="messages">
-    {% for message in messages %}
-        <li class="message">
-            {{ message }}
-        </li>
-    {% endfor %}
-    </ul>
-    {% endif %}
+    <h1>Dear diary …</h1>
 
     {% block content %}{% endblock %}
+
+    {% block footer %}
+        {% include "footer.html" %}
+    {% endblock %}
 
 </body>
 
