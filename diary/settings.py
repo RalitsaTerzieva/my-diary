@@ -31,14 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    "entries.apps.EntriesConfig",
+    #"entries.apps.EntriesConfig",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users'
+    'users',
+    'entries',
 ]
 
 MIDDLEWARE = [
@@ -125,6 +126,6 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'entry-list'
 LOGOUT_REDIRECT_URL = "login"
 # AUTH_USER_MODEL = 'users.User'

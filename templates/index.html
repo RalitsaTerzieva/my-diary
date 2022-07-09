@@ -5,13 +5,13 @@
       <h1>Hello, {{user.username}} !!!</h1>
       <p> Welcome to the our site</p>
       <div>
-          <a href="{% url 'logout' %}?next=/home">Logout</a>
+          <a href="{% url 'logout' %}?next=/">Logout</a>
         </div>
   {% else %}
       <h1>Hello</h1>
       <p> Welcome to the our site!</p>
       <div>
-          <a href="{% url 'home' %}">Sign Up</a>
+          <a href="{% url 'index' %}">Sign Up</a>
     
           <a href="{% url 'login' %}">Login</a>
         </div>
