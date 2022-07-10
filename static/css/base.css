@@ -11,3 +11,7 @@ body {
 body h1 {
     color: pink;
 }
+
+header, footer {
+    width: 100%;
+}
