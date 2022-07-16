@@ -2,17 +2,22 @@
 
 {% block title %}Login{% endblock %}
 
+
 {% block content %}
-<form action="{% url 'index' %}" method="post">
+
+<form method="post">
   {% csrf_token %}
   <div class="mb-3">
+    {{ form.non_field_errors }}
     <h1 class="login">Login</h1>
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="username" class="form-label">Username</label>
+    <input type="text" name="username" class="form-control" id="username" aria-describedby="emailHelp">
+    {{ form.username.errors }}
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="password">
+    {{ form.password.errors }}
   </div>
   <button type="submit" class="btn btn-success">Submit</button>
 </form>
