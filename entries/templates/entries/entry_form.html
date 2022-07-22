@@ -1,17 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
+
     <form method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Save">
+        <div class="mb-5 mt-4">
+            <label for="title" class="form-label">Title</label>
+            {{ form.title }}
+        </div>
+        <div class="mb-5">
+            <label for="context" class="form-label">Context</label>
+            {{ form.content }}
+        </div>
+            <button type="submit" class="btn btn-success">Save</button>
+            {% if entry %}
+            <a href="{% url 'entry-detail' entry.id %}">
+                <button type="button" class="btn btn-warning">Cancel</button>
+            </a>
+            {% else %}
+                <a href="{% url 'entry-list' %}">
+                    <button type="button" class="btn btn-warning">Cancel</button>
+                </a>
+            {% endif %}
+        </div>
     </form>
-    {% if entry %}
-        <a href="{% url 'entry-detail' entry.id %}">
-            <button>Cancel</button>
-        </a>
-    {% else %}
-        <a href="{% url 'entry-list' %}">
-            <button>Cancel</button>
-        </a>
-    {% endif %}
+   
 {% endblock %}
