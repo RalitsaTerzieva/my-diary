@@ -7,7 +7,6 @@
     <a href="{% url 'entry-create' %}"><button type="button" class="btn btn-success mt-2">Add new entry <i class="fa-solid fa-plus"></i></button></a>
 
 </div>
-
 <div class="mt-5">
         {% for entry in entry_list %}
             <div class="row">
@@ -18,5 +17,4 @@
             </div>
         {% endfor %}
 </div>
-    
 {% endblock %}
