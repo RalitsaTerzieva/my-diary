@@ -1,16 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <article>
-        
-        <h1><i class="fa-solid fa-book"></i> Dear diary …</h1>
-        <h2 class="mark">{% now "Y-m-d H:i" %}</em></h2>
-        <a href="{% url 'entry-create' %}"><button>Add new entry</button></a>
-    </article>
-    {% for entry in entry_list %}
-    <article>
-        <h2>{{ entry.date_created|date:'Y-m-d H:i' }}</h2>
-        <h3>{{ entry.title }}</h3>
-    </article>
-    {% endfor %}
+<div class="d-flex justify-content-around mt-4">
+
+    <h1><i class="fa-solid fa-book"></i> Dear diary …</h1>
+    <a href="{% url 'entry-create' %}"><button type="button" class="btn btn-success mt-2">Add new entry <i class="fa-solid fa-plus"></i></button></a>
+
+</div>
+
+<div class="mt-5">
+        {% for entry in entry_list %}
+            <div class="row">
+                <h2 class="mr-3">{{ entry.date_created|date:'Y-m-d H:i' }}</h2>
+                <h3>{{ entry.title }}</h3>
+                <a class="mx-3" href="{% url 'entry-update' %}">✍️ Edit</a>
+                <a href="{% url 'entry-delete' %}">⛔ Delete</a>
+            </div>
+        {% endfor %}
+</div>
+    
 {% endblock %}
