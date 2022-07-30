@@ -10,12 +10,12 @@
   <div class="mb-3">
     {{ form.non_field_errors }}
     <h1 class="login">Login</h1>
-    <label for="username" class="form-label">Username</label>
+    <label for="username" class="form-label" required>Username</label>
     <input type="text" name="username" class="form-control" id="username" aria-describedby="emailHelp">
     {{ form.username.errors }}
   </div>
   <div class="mb-3">
-    <label for="password" class="form-label">Password</label>
+    <label for="password" class="form-label" required>Password</label>
     <input type="password" name="password" class="form-control" id="password">
     {{ form.password.errors }}
   </div>

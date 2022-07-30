@@ -4,11 +4,11 @@
     <form method="post">
         {% csrf_token %}
         <div class="mb-5 mt-4">
-            <label for="title" class="form-label">Title</label>
+            <label for="title" class="form-label" required>Title</label>
             {{ form.title }}
         </div>
         <div class="mb-5">
-            <label for="context" class="form-label">Context</label>
+            <label for="context" class="form-label" required>Context</label>
             {{ form.content }}
         </div>
             <button type="submit" class="btn btn-success">Save</button>
