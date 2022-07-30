@@ -1,0 +1,8 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{entry.title}}</h5>
+      <p class="card-text">{{entry.content}}</p>
+      <a class="mx-3" href="{% url 'entry-update' %}">✍️ Edit</a>
+      <a href="{% url 'entry-delete' %}">⛔ Delete</a>
+    </div>
+</div>

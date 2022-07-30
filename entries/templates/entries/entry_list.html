@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+
 {% block content %}
 <div class="d-flex justify-content-around mt-4">
 
@@ -10,10 +11,7 @@
 <div class="mt-5">
         {% for entry in entry_list %}
             <div class="row">
-                <h2 class="mr-3">{{ entry.date_created|date:'Y-m-d H:i' }}</h2>
-                <h3>{{ entry.title }}</h3>
-                <a class="mx-3" href="{% url 'entry-update' %}">✍️ Edit</a>
-                <a href="{% url 'entry-delete' %}">⛔ Delete</a>
+                {% include "entries/entry.html" %}          
             </div>
         {% endfor %}
 </div>
