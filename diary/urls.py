@@ -16,13 +16,13 @@ Including another URLconf
 from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
-from diary.views import index
+from diary.views import IndexView
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('entries/', include('entries.urls')),
-    path("", index, name="index"),
+    path("", IndexView.as_view(), name="index"),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('users.urls'))
     
