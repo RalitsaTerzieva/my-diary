@@ -18,12 +18,12 @@ urlpatterns = [
         name="entry-create"
     ),
     path(
-        "update",
+        "update/<int:pk>",
         views.EntryUpdateView.as_view(),
         name="entry-update"
     ),
     path(
-        "delete",
+        "delete/<int:pk>",
         views.EntryDeleteView.as_view(),
         name="entry-delete"
     ),
