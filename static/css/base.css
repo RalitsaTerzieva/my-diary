@@ -24,6 +24,12 @@ footer {
     color: #5EBEC4;
 }
 
+div .about {
+    margin-top: 35px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
 .main-container {
     height: 80vh;
 }
