@@ -2,6 +2,7 @@ from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
 from users.forms import UserRegisterForm
+from users.models import UserProfile
 
 
 class SignUp(SuccessMessageMixin, CreateView):
@@ -12,6 +13,14 @@ class SignUp(SuccessMessageMixin, CreateView):
     
     def form_valid(self, form):
         response = super().form_valid(form)
-        # Create an UserProfile instance and set the user foreign key to the user that we just created
-        # self.object is the newly created User object
+       
+        cleaned_data = form.cleaned_data
+        profile = UserProfile(
+            phone=cleaned_data["phone"],
+            birth_day=cleaned_data['birth_day'],
+            gender=cleaned_data['gender'],
+            user=self.object
+        )
+        profile.save()
+        
         return response

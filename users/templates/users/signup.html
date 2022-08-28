@@ -23,6 +23,32 @@
                         {{ form.username.errors}}
                         </div>
                     </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <div class="form-outline flex-fill mb-0">
+                            
+                            {{form.gender}}
+                            <label class="form-label" for="gender">Gender</label>
+                            {{ form.gender.errors}}
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        <div class="form-outline flex-fill mb-0">
+                            
+                            {{form.birth_day}}
+                            <label class="form-label" for="gender">Birthday</label>
+                            {{ form.birth_day.errors}}
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-4">
+                        
+                        <div class="form-outline flex-fill mb-0">
+                            
+                            {{form.phone}}
+                            <label class="form-label" for="gender">Phone</label>
+                            {{ form.phone.errors}}
+                        </div>
+                    </div>
     
                     <div class="d-flex flex-row align-items-center mb-4">
                         <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
