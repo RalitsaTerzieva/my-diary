@@ -16,7 +16,8 @@
       
         <ul class="navbar-nav ml-auto">
             <li class="nav-item"><h1 class="user">Hello, {{user.username}} !!!</h1></li>
-            <li class="nav-item" href="{% url 'about' %}?next={% url 'about' %}"><a class="nav-link" href="/about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}?">About</a></li>
+            <li class="nav-item"><a class="nav-link"  href="{% url 'profile-details' %}">User Profile</a></li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'logout' %}?next={% url 'index' %}">Logout</a>
             </li>
