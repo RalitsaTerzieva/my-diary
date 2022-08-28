@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div>
+        <div><i class="fa-solid fa-user"></i> {{userprofile.user.username}}</div>
+        <div><i class="fa-solid fa-cake-candles"></i> {{userprofile.birth_day}}</div>
+        <div><i class="fa-solid fa-mobile"></i> {{userprofile.phone }} </div>
+        <div>You have  {{ entries_count }} entries</div>
+    
+    </div>
+
+{% endblock %}
