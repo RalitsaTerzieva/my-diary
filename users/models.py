@@ -12,10 +12,6 @@ class UserProfile(models.Model):
     )
     
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    id = models.IntegerField(primary_key=True)
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
     birth_day = models.DateField()
-    email = models.CharField(max_length=20)
     gender = models.CharField(max_length=20, choices=GENDER_CHOICES)
     phone = models.IntegerField()
